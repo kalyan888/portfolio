@@ -1,0 +1,12 @@
+/* .particles {
+  position: absolute;
+  width: 100vw;
+  height: 90vh;
+  z-index: -2;
+  top: 10vh;
+  opacity: 0.3;
+} */
+
+.react-particles {
+  z-index: -1;
+}

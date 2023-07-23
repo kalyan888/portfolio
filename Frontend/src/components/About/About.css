@@ -1,0 +1,315 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+.about-page {
+  background-color: #f0f0f0;
+  height: 90vh;
+}
+
+.education-details-list {
+  list-style-type: none;
+}
+
+.about-section-description {
+  font-size: 14px;
+}
+
+.education-and-skills-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-details-container {
+  width: 100%;
+}
+
+.qualification {
+  font-weight: 500;
+}
+
+.education {
+  margin-top: 15px;
+}
+
+.education-place {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  font-size: 24px;
+  font-weight: 500;
+  padding: 10px 0;
+}
+
+.skill-item {
+  font-size: 16px;
+  list-style-type: none;
+  margin-bottom: 12px;
+  margin-right: 8px;
+}
+
+/* ************* Smaller devices  ************ */
+
+@media screen and (max-width: 767px) {
+  .about-page {
+    min-height: 90vh;
+    padding: 20px;
+  }
+  .about-me-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-section-heading {
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 0.5rem;
+    text-align: center;
+    margin: 0 0 20px 0;
+  }
+  .about-section-description {
+    text-align: justify;
+    font-size: 13px;
+  }
+  .resume-btn {
+    font-size: 14px;
+    font-weight: 500;
+    height: 39px;
+    width: 130px;
+    border: none;
+    border-radius: 25px;
+    color: #f0f0f0;
+    background-color: #013273;
+    margin-top: 25px;
+    outline: none;
+  }
+  .resume-btn:hover {
+    color: #013273;
+    background-color: #f0f0f0;
+  }
+  .education-details-container {
+    margin: 20px 0;
+  }
+  .qualification {
+    font-size: 14px;
+  }
+  .education-place {
+    font-size: 12px;
+  }
+  .education-and-skills-heading {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  .skills-container {
+    margin: 20px 0 0 0;
+  }
+  .skills-list {
+    flex-direction: row;
+    align-items: flex-start;
+    max-height: 250px;
+    margin-top: 10px;
+  }
+}
+
+/* ************* Larger devices  ************ */
+
+@media screen and (min-width: 768px) {
+  .about-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .about-me-container {
+    text-align: center;
+    width: 50vw;
+    padding: 0 50px;
+    background-color: #1e1e30;
+    min-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  .about-section-heading {
+    font-size: 34px;
+    font-weight: 500;
+    letter-spacing: 1rem;
+    position: absolute;
+    top: 12vh;
+    text-align: center;
+  }
+  .about-section-heading > span {
+    color: #f0f0f0;
+  }
+  .about-section-description {
+    font-size: 12px;
+    font-weight: 400;
+  }
+
+  .education-and-skills-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    width: 50vw;
+    padding: 0 30px 0 60px;
+  }
+  .education-details-container {
+    width: 50%;
+    margin-top: -25px;
+  }
+  .education-and-skills-heading {
+    font-size: 17px;
+    font-weight: 500;
+  }
+  .education {
+    margin-top: 22px;
+  }
+  .qualification {
+    font-size: 14px;
+  }
+  .education-place {
+    font-size: 12px;
+  }
+  .skills-container {
+    width: 50%;
+  }
+  .skills-list {
+    flex-direction: column;
+    align-items: flex-start;
+    max-height: 250px;
+    margin-top: 10px;
+  }
+  /*  ******** Button Animation ******** */
+  .resume-btn {
+    color: #fff;
+    transition: all 0.3s;
+    position: relative;
+    font-size: 13px;
+    font-weight: 500;
+    height: 39px;
+    width: 135px;
+    border: none;
+    border-radius: 25px;
+    color: #013273;
+    background-color: #f0f0f0;
+    margin-top: 35px;
+  }
+  .resume-btn {
+    transition: all 0.3s;
+  }
+  .resume-btn::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.3s;
+    border-top-width: 1px;
+    border-bottom-width: 1px;
+    border-top-style: solid;
+    border-bottom-style: solid;
+    border-top-color: rgba(255, 255, 255, 0.5);
+    border-bottom-color: rgba(255, 255, 255, 0.5);
+    transform: scale(0.1, 1);
+  }
+  .resume-btn:hover {
+    cursor: pointer;
+    color: #f0f0f0;
+    background-color: #1e1e30;
+    letter-spacing: 3px;
+  }
+  .resume-btn:hover::before {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+  .resume-btn::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s;
+  }
+  .resume-btn:hover::after {
+    opacity: 0;
+    transform: scale(0.1, 1);
+  }
+  .skill-item {
+    font-size: 12px;
+    padding: 7px 16px;
+  }
+}
+
+/*  Animation  */
+.qualification {
+  position: relative;
+  animation: qualification 0.5s;
+}
+
+.education-place {
+  position: relative;
+  animation: place 1s;
+}
+
+.skill-item {
+  font-size: 10px;
+  color: #151f4d;
+  background-color: #96bffa;
+  border-radius: 25px;
+  padding: 6px 15px;
+  position: relative;
+  animation: skills 1s;
+}
+
+/* ************  Animations ************ */
+@keyframes qualification {
+  0% {
+    left: -100px;
+    top: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes place {
+  0% {
+    left: -300px;
+    top: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+  }
+}
+
+@keyframes skills {
+  0% {
+    left: -150px;
+    top: 0px;
+    opacity: 0;
+  }
+
+  100% {
+    left: 0px;
+    top: 0px;
+    opacity: 1;
+  }
+}
